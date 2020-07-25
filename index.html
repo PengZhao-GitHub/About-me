@@ -4,11 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="deftaul.css">
+    
     <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&family=Russo+One&display=swap"
         rel="stylesheet">
     <title>Peng Zhao</title>
+
+    <link rel="stylesheet" href="default.css">
+    <link rel="stylesheet" href="" id="theme-style">
+
 </head>
 
 <body>
@@ -37,11 +41,11 @@
                     <h5 style="text-align: center; line-height: 0;">Personalize Theme </h5>
 
                     <div id="theme-option-wrapper">
-
-                        <div id="light-mode" class="theme-dot"></div>
-                        <div id="blue-mode" class="theme-dot"></div>
-                        <div id="green-mode" class="theme-dot"></div>
-                        <div id="purple-mode" class="theme-dot"></div>
+                        <!-- data-* グローバル属性 はカスタムデータ属性と呼ばれる属性の組を作り、HTML と、スクリプトによる DOM 表現との間で、固有の情報を交換できるようにします。-->
+                        <div data-mode="light" id="light-mode" class="theme-dot"></div>
+                        <div data-mode="blue" id="blue-mode" class="theme-dot"></div>
+                        <div data-mode="green" id="green-mode" class="theme-dot"></div>
+                        <div data-mode="purple" id="purple-mode" class="theme-dot"></div>
                     </div>
 
                     <p id="settings-note">
@@ -71,21 +75,136 @@
 
     <section class="s2">
         <div class="main-container">
-            About
-        </div>
+            <div class="about-wrapper">
+                <div class="about-me">
+                    <h4>About Me</h4>
+                    <p>
+                        I love programming.
+                    </p>
+                    <p>
+                        My job is to use technology to automate business process.
+                    </p>
+                    <hr>
+                    <h4>TOP EXPERTISE</h4>
+                    <p>
+                        Enterprise Architecture, Solution Architecture, Fullstack Deverloper,
+                        Insurance solutions.
+                        <a target="_blank" href="Customer Portal context.pdf">Download Resume</a>
+                    </p>
+
+                    <div id="skills">
+                        <ul>
+                            <li>JavaScript</li>
+                            <li>Angular</li>
+                            <li>Python</li>
+                            <li>Scikitt-Learn</li>
+                            <li>TensorFlow</li>
+                        </ul>
+
+                        <ul>
+                            <li>HTML/CSS</li>
+                            <li>AWS</li>
+                            <li>DBMS</li>
+                            <li>ETL</li>
+                            <li>ESB/API</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="social-links">
+
+                    <img id="social_img" src="images/Peng.jpeg" alt="">
+                    <h3>Find me on Twitter & Youtube</h3>
+                    <a target="_blank" href="#">YouTube: @Peng</a>
+                    <br>
+                    <a href="#" target="_blank">Twitter: @Peng</a>
+
+                </div>
+            </div>
     </section>
 
     <section class="s1">
         <div class="main-container">
-            Portfolio
+            <h3 style="text-align: center;">Some of my past projects</h3>
+
+            <div class="post-wrapper">
+
+                <div class="card">
+
+                    <div class="post">
+                        <img class="thumbnail" src="images/Peng.jpeg">
+                        <div class="post-preview">
+                            <h6 class="post-title">Post Title</h6>
+                            <p class="post-intro">
+                                This is a sentence. Some more text.
+                            </p>
+                            <a href="post.html">Read More</a>
+                        </div>
+                    </div>
+
+                </div>
+
+
+                <div class="card">
+                    <div class="post">
+                        <img class="thumbnail" src="images/Peng.jpeg">
+                        <div class="post-preview">
+                            <h6 class="post-title">Post Title</h6>
+                            <p class="post-intro">
+                                This is a sentence. Some more text.
+                            </p>
+                            <a href="">Read More</a>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="card">
+                    <div class="post">
+                        <img class="thumbnail" src="images/Peng.jpeg">
+                        <div class="post-preview">
+                            <h6 class="post-title">Post Title</h6>
+                            <p class="post-intro">
+                                This is a sentence.
+                            </p>
+                            <a href="">Read More</a>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
         </div>
     </section>
 
     <section class="s2">
         <div class="main-container">
-            Contact
+            <h3 style="text-align: center;">Get in Touch</h3>
+
+            <form id="contact-form">
+
+                <label>Name</label>
+                <input type="text" class="input-field" name="name">
+
+                <label>Subject</label>
+                <input type="text" class="input-field" name="subject">
+
+
+                <label>Email</label>
+                <input type="text" class="input-field" name="email">
+
+                <label>Message</label>
+                <textarea class="input-field" name="message"></textarea>
+
+                <input id="submit-btn" type="submit" value="Send">
+
+            </form>
+
         </div>
     </section>
+
+
+<script src="main.js"></script>
 
 </body>
 
